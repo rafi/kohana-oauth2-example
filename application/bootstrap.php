@@ -22,7 +22,7 @@ else
  * @see  http://kohanaframework.org/guide/using.configuration
  * @see  http://php.net/timezones
  */
-date_default_timezone_set('America/Chicago');
+date_default_timezone_set('Europe/Dublin');
 
 /**
  * Set the default locale.
@@ -30,7 +30,7 @@ date_default_timezone_set('America/Chicago');
  * @see  http://kohanaframework.org/guide/using.configuration
  * @see  http://php.net/setlocale
  */
-setlocale(LC_ALL, 'en_US.utf-8');
+setlocale(LC_ALL, 'en_IE.utf-8');
 
 /**
  * Enable the Kohana auto-loader.
@@ -53,7 +53,7 @@ ini_set('unserialize_callback_func', 'spl_autoload_call');
 /**
  * Set the default language
  */
-I18n::lang('en-us');
+I18n::lang('en-ie');
 
 /**
  * Set Kohana::$environment if a 'KOHANA_ENV' environment variable has been supplied.
@@ -80,7 +80,9 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  caching     enable or disable internal caching                 FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/',
+	'base_url'   => '/kohana-oauth2-example/',
+	'index_file' => '',
+	'expose'     => TRUE,
 ));
 
 /**
@@ -97,14 +99,18 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
+	'auth'                    => MODPATH.'auth',                    // Basic authentication
+	// 'cache'                   => MODPATH.'cache',                   // Caching with multiple backends
+	// 'codebench'               => MODPATH.'codebench',               // Benchmarking tool
+	'database'                => MODPATH.'database',                // Database access
+	// 'image'                   => MODPATH.'image',                   // Image manipulation
+	'orm'                     => MODPATH.'orm',                     // Object Relationship Mapping
+	// 'unittest'                => MODPATH.'unittest',                // Unit testing
+	// 'userguide'               => MODPATH.'userguide',               // User guide and API documentation
+	'minion'                  => MODPATH.'minion',                  // Minion CLI Framework
+	'minion-tasks-migrations' => MODPATH.'minion-tasks-migrations', // Minion Database Migrations
+	'uid'                     => MODPATH.'uuid',                    // UUID Generation
+	'oauth2'                  => MODPATH.'oauth2',                  // OAuth 2.0
 	));
 
 /**

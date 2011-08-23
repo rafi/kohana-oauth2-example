@@ -13,3 +13,12 @@
 [submodule "modules/uuid"]
 	path = modules/uuid
 	url = http://github.com/shadowhand/uuid.git
+[submodule "modules/minion"]
+	path = modules/minion
+	url = http://github.com/kohana-minion/core.git
+[submodule "modules/orm"]
+	path = modules/orm
+	url = http://github.com/kohana/orm.git
+[submodule "modules/minion-tasks-migrations"]
+	path = modules/minion-tasks-migrations
+	url = http://github.com/kohana-minion/tasks-migrations.git

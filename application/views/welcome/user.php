@@ -1,0 +1,1 @@
+<p>User <?=$user->username ?> has been created.</p>
