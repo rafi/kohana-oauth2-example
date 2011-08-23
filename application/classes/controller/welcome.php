@@ -35,6 +35,11 @@ class Controller_Welcome extends Controller_Template {
 		$this->template->content->oauth_token_url = Route::url('oauth2', array(
 			'action'     => 'token',
 		), TRUE);
+
+		$this->template->content->resource_url = Route::url('default', array(
+			'controller' => 'api',
+			'action'     => 'me',
+		), TRUE);
 	}
 
 	/**

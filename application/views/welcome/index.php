@@ -46,6 +46,8 @@
 	<h2>Step 4 - Obtain Access Token</h2>
 
 	<form method="post" action="<?=$oauth_token_url ?>">
+		<p><small>Note: If you don't see JSON, or dont get asked to download a JSON file, an error occurred and your browser is hiding the error. Most likely your code has expired.</small></p>
+		
 		<label for="client_id">Client ID:</label>
 		<input type="text" name="client_id" id="client_id"/>
 
@@ -74,5 +76,15 @@
 		</div>
 
 		<input type="submit" value="Obtain Tokens"/>
+	</form>
+</div>
+<div>
+	<h2>Step 4 - Access a protected resource</h2>
+
+	<form method="post" action="<?=$resource_url ?>">
+		<label for="access_token">Acess Token:</label>
+		<input type="text" name="access_token" id="access_token"/>
+
+		<input type="submit" value="Access the resource"/>
 	</form>
 </div>
