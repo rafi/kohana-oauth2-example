@@ -40,6 +40,11 @@ class Controller_Welcome extends Controller_Template {
 			'controller' => 'api',
 			'action'     => 'me',
 		), TRUE);
+
+		$this->template->content->logout_url = Route::url('default', array(
+			'controller' => 'welcome',
+			'action'     => 'logout',
+		), TRUE);
 	}
 
 	/**
@@ -97,6 +102,17 @@ class Controller_Welcome extends Controller_Template {
 
 		$this->template->title = "Login";
 		$this->template->content = View::factory('welcome/login');
+	}
+
+	/**
+	 * Logout ..
+	 */
+	public function action_logout()
+	{
+		Auth::instance()->logout(TRUE);
+
+		$this->template->title = "Logout";
+		$this->template->content = View::factory('welcome/logout');
 	}
 
 }

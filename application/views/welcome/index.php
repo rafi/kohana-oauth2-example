@@ -43,11 +43,16 @@
 	</form>
 </div>
 <div>
-	<h2>Step 4 - Obtain Access Token</h2>
+	<h2>Step 4 - Logout</h2>
+	<p><small>Note: We do this so we can be sure that accessing the protected resource (which gets the user's details) is being done with only the auth code</small></p>
+	<a href="<?=$logout_url ?>">Logout</a>
+</div>
+<div>
+	<h2>Step 5 - Obtain Access Token</h2>
 
 	<form method="post" action="<?=$oauth_token_url ?>">
 		<p><small>Note: If you don't see JSON, or dont get asked to download a JSON file, an error occurred and your browser is hiding the error. Most likely your code has expired.</small></p>
-		
+
 		<label for="client_id">Client ID:</label>
 		<input type="text" name="client_id" id="client_id"/>
 
@@ -79,7 +84,7 @@
 	</form>
 </div>
 <div>
-	<h2>Step 4 - Access a protected resource</h2>
+	<h2>Step 6 - Access a protected resource</h2>
 
 	<form method="post" action="<?=$resource_url ?>">
 		<label for="access_token">Acess Token:</label>
