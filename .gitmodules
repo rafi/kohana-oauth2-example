@@ -1,0 +1,15 @@
+[submodule "system"]
+	path = system
+	url = http://github.com/kohana/core.git
+[submodule "modules/database"]
+	path = modules/database
+	url = http://github.com/kohana/database.git
+[submodule "modules/auth"]
+	path = modules/auth
+	url = http://github.com/kohana/auth.git
+[submodule "modules/oauth2"]
+	path = modules/oauth2
+	url = http://github.com/managedit/kohana-oauth2.git
+[submodule "modules/uuid"]
+	path = modules/uuid
+	url = http://github.com/shadowhand/uuid.git
