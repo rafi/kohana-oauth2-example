@@ -17,7 +17,7 @@ class OAuth2_Controller extends Kohana_OAuth2_Controller {
          */
         Kohana::$log->add(Log::INFO, 'OAuth2 request made on behalf of \':user_id\' from \':client_id\'', array(
             ':user_id'   => $this->_oauth_user_id,
-            ':client_id' => $this->_oauth_client_id,
+            ':client_id' => $this->_oauth_client->pk(),
         ));
 
     }

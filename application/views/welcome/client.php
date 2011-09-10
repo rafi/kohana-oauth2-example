@@ -1,5 +1,5 @@
 <h2>Client has been created.</h2>
-<p>Save these somewhere! You need them!</h2>
+<p>Save these somewhere! You need them!</p>
 
 <ul>
 	<li>Client ID: <?=$client->client_id ?> </li>
